@@ -24,7 +24,7 @@ class App:
 
     def startup(self) -> None:
         project_name: str = self.project_name
-        self.window.open(WINDOW_WIDTH, WINDOW_HEIGHT, project_name)
+        self.window.open(WINDOW_WIDTH, WINDOW_HEIGHT, f"Project: {project_name}")
 
     def shutdown(self) -> None:
         self.window.close()
