@@ -1,0 +1,3 @@
+TICK_RATE: int = 60
+WINDOW_WIDTH: int = 800
+WINDOW_HEIGHT: int = 800

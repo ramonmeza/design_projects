@@ -1,0 +1,21 @@
+[project]
+name = "design-projects"
+version = "0.1.0"
+description = "Reading through and implementing design patterns described in Robert Nystrom's Game Programming Patterns."
+readme = "README.md"
+authors = [
+    { name = "Ramon Meza", email = "ramon_meza@live.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "raylib>=6.0.1.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.11.24,<0.12.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.17.2",
+]
