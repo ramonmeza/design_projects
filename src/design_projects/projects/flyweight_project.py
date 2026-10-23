@@ -156,7 +156,7 @@ class FlyweightProject(Project):
             y,
             int(size.x + padding * 2),
             int(size.y + padding * 2),
-            Color(128, 128, 128, 128),
+            Color(120, 120, 120, 240),
         )
         drawer.draw_text(
             self.ui_text, x + padding, y + padding, font_size, Color(g=255)
