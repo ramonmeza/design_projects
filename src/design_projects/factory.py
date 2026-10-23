@@ -1,5 +1,6 @@
-from enum import IntEnum
+from enum import IntEnum, auto
 
+from .config import TICK_RATE
 from .core import DrawAPI, Project, Renderer, Window
 
 
@@ -9,6 +10,7 @@ class Backends(IntEnum):
 
 class Projects(IntEnum):
     UPDATE_SYSTEM = 0
+    COMMAND_PATTERN = auto()
 
 
 def create_draw_api(backend: Backends = Backends.RAYLIB) -> DrawAPI:
@@ -24,9 +26,14 @@ def create_draw_api(backend: Backends = Backends.RAYLIB) -> DrawAPI:
 def create_project(project: Projects) -> Project:
     match project:
         case Projects.UPDATE_SYSTEM:
-            from .projects.update_system import UpdateSystemProject
+            from .projects.update_system_project import UpdateSystemProject
 
             return UpdateSystemProject()
+
+        case Projects.COMMAND_PATTERN:
+            from .projects.command_pattern_project import CommandPatternProject
+
+            return CommandPatternProject()
 
         case _:
             raise NotImplementedError

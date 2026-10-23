@@ -16,7 +16,7 @@ class App:
         self.window: Window = create_window()
         self.renderer: Renderer = create_renderer()
         self.draw_api: DrawAPI = create_draw_api()
-        self.current_project: Project = create_project(Projects.UPDATE_SYSTEM)
+        self.current_project: Project = create_project(Projects.COMMAND_PATTERN)
         self.fixed_update_interval: float = 1.0 / TICK_RATE
         self.fixed_update_stopwatch: float = 0.0
 

@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from abc import ABC
 from collections.abc import Generator
 from dataclasses import dataclass
 from typing import Protocol
@@ -39,15 +38,7 @@ class DrawAPI(Protocol):
     ) -> None: ...
 
 
-class Project(ABC):
-    def __init__(self, tick_rate: int) -> None:
-        self.tick_rate: int = tick_rate
-
-    def on_update(self, delta_time: float) -> None:
-        pass
-
-    def on_fixed_update(self, interval: float) -> None:
-        pass
-
-    def on_draw(self, drawer: DrawAPI) -> None:
-        pass
+class Project(Protocol):
+    def on_update(self, delta_time: float) -> None: ...
+    def on_fixed_update(self, interval: float) -> None: ...
+    def on_draw(self, drawer: DrawAPI) -> None: ...
