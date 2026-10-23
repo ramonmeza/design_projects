@@ -10,6 +10,7 @@ class Backends(IntEnum):
 class Projects(IntEnum):
     UPDATE_SYSTEM = 0
     COMMAND_PATTERN = auto()
+    FLYWEIGHT = auto()
 
 
 def create_draw_api(backend: Backends = Backends.RAYLIB) -> DrawAPI:
@@ -33,6 +34,11 @@ def create_project(project: Projects) -> Project:
             from .projects.command_pattern_project import CommandPatternProject
 
             return CommandPatternProject()
+
+        case Projects.FLYWEIGHT:
+            from .projects.flyweight_project import FlyweightProject
+
+            return FlyweightProject()
 
         case _:
             raise NotImplementedError

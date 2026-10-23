@@ -22,6 +22,16 @@
             ]
         },
         {
+            "name": "Run Flyweight Project",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "design_projects",
+            "args": [
+                "--project",
+                "2"
+            ]
+        },
+        {
             "name": "CLI Help",
             "type": "debugpy",
             "request": "launch",

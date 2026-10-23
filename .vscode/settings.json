@@ -9,5 +9,6 @@
         "**/__pycache__": true
     },
     "editor.defaultFormatter": "charliermarsh.ruff",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "editor.rulers": [80]
 }
