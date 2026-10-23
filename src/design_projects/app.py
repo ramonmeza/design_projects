@@ -9,6 +9,7 @@ from .factory import (
     create_renderer,
     create_window,
 )
+from .utils import capitalize_each_word
 
 
 class App:
@@ -16,12 +17,14 @@ class App:
         self.window: Window = create_window()
         self.renderer: Renderer = create_renderer()
         self.draw_api: DrawAPI = create_draw_api()
+        self.project_name: str = capitalize_each_word(project.name.replace("_", " "))
         self.current_project: Project = create_project(project)
         self.fixed_update_interval: float = 1.0 / TICK_RATE
         self.fixed_update_stopwatch: float = 0.0
 
     def startup(self) -> None:
-        self.window.open(WINDOW_WIDTH, WINDOW_HEIGHT, "Game Programming Patterns")
+        project_name: str = self.project_name
+        self.window.open(WINDOW_WIDTH, WINDOW_HEIGHT, project_name)
 
     def shutdown(self) -> None:
         self.window.close()
