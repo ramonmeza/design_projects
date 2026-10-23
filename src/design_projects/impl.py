@@ -28,6 +28,9 @@ class RaylibDrawAPI:
             color = Color(0, 0, 0, 255)
         rl.clear_background(tuple(color))  # type: ignore
 
+    def draw_circle(self, x: int, y: int, r: float, color: Color) -> None:
+        rl.draw_circle(x, y, r, tuple(color))  # type: ignore
+
     def draw_rect(self, x: int, y: int, w: int, h: int, color: Color) -> None:
         rl.draw_rectangle(x, y, w, h, tuple(color))  # type: ignore
 
