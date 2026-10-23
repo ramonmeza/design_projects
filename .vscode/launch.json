@@ -2,10 +2,33 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python Debugger: Module",
+            "name": "Run Update System Project",
             "type": "debugpy",
             "request": "launch",
-            "module": "design_projects"
+            "module": "design_projects",
+            "args": [
+                "--project",
+                "0"
+            ]
+        },
+        {
+            "name": "Run Command Pattern Project",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "design_projects",
+            "args": [
+                "--project",
+                "1"
+            ]
+        },
+        {
+            "name": "CLI Help",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "design_projects",
+            "args": [
+                "--help",
+            ]
         }
     ]
 }

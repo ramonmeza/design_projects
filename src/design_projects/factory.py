@@ -1,6 +1,5 @@
 from enum import IntEnum, auto
 
-from .config import TICK_RATE
 from .core import DrawAPI, Project, Renderer, Window
 
 
