@@ -10,7 +10,7 @@ def main() -> None:
         "--project",
         type=lambda x: Projects(int(x)),
         choices=list(Projects),
-        default=Projects.UPDATE_SYSTEM,
+        default=Projects.FLYWEIGHT,
         help=", ".join([f"{project.name}={project.value}" for project in Projects]),
     )
     args: Namespace = parser.parse_args()
